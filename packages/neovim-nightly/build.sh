@@ -82,7 +82,6 @@ _patch_luv() {
 }
 
 termux_step_host_build() {
-	make distclean
 	termux_setup_cmake
 
 	TERMUX_ORIGINAL_CMAKE=$(command -v cmake)
@@ -93,6 +92,7 @@ termux_step_host_build() {
 	chmod +x "$TERMUX_ORIGINAL_CMAKE"
 	export TERMUX_ORIGINAL_CMAKE="$TERMUX_ORIGINAL_CMAKE.orig"
 
+	make distclean
 	mkdir -p $TERMUX_PKG_HOSTBUILD_DIR/deps
 	cd $TERMUX_PKG_HOSTBUILD_DIR/deps
 	cmake $TERMUX_PKG_SRCDIR/cmake.deps
