@@ -7,7 +7,7 @@ TERMUX_PKG_MAINTAINER="Aditya Alok <alok@termux.org>"
 # the epoch of the package version.
 TERMUX_PKG_VERSION="1:0.10.0-dev-122+g95c6e1b74"
 TERMUX_PKG_SRCURL="https://github.com/neovim/neovim/archive/nightly.tar.gz"
-TERMUX_PKG_SHA256=aef5d4e6c2b695b3e3580087f2e7943b02196c90b8e91414f4a240d75f42ccdd
+TERMUX_PKG_SHA256=fb64c080afa93b549db9d6d5b59da78e1c5fe39dfba3695f216a633931d7e614
 TERMUX_PKG_DEPENDS="libiconv, libuv, luv, libmsgpack, libandroid-support, libvterm, libtermkey, libluajit, libunibilium, libtreesitter"
 TERMUX_PKG_HOSTBUILD=true
 
