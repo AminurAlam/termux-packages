@@ -1,0 +1,13 @@
+diff --git a/src/modules/username.rs b/src/modules/username.rs
+index 8ba3509..e3e1a83 100644
+--- a/src/modules/username.rs
++++ b/src/modules/username.rs
+@@ -25,7 +25,7 @@ pub fn module<'a>(context: &'a Context) -> Option<Module<'a>> {
+         .ok()
+         .or_else(|| context.get_env(USERNAME_ENV_VAR))?;
+ 
+-    #[cfg(test)]
++    #[cfg(any(test, target_os = "android"))]
+     let mut username = context.get_env(USERNAME_ENV_VAR)?;
+ 
+     let mut module = context.new_module("username");
